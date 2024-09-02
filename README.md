@@ -11,15 +11,22 @@ This project focuses on the design, simulation, and implementation of a Type-II 
 - Ensure system stability under varying load and input conditions.
 - Improve phase margin and adjust gain crossover frequency for enhanced stability.
 
-## Project Structure
+## Uncompensated System Analysis
 
-- **1. Uncompensated System Analysis**: Analyzes the open-loop Buck converter system, deriving its transfer function and simulating its performance using MATLAB. The system’s stability and frequency response are evaluated using Bode plots.
-  
-- **2. Compensator Design**: Involves designing a Type-II compensator to improve system stability. The compensator is designed to achieve a specific gain crossover frequency (100 Hz) and phase margin (120°). MATLAB is used to derive and simulate the compensator’s transfer function.
+In this stage, the open-loop Buck converter system is analyzed by deriving its transfer function and simulating its performance using MATLAB. The system’s stability and frequency response are evaluated using Bode plots. This analysis highlights the need for compensation due to the system's low phase margin and high gain crossover frequency, which indicate potential instability.
 
-- **3. Closed-Loop System Implementation**: Integrates the compensator into the Buck converter’s control loop. The closed-loop system is simulated in MATLAB/Simulink to evaluate its performance under various conditions.
+## Compensator Design
 
-- **4. Simulation and Analysis**: Simulates the closed-loop system using MATLAB/Simulink, analyzing key parameters such as input voltage, output voltage, inductor current, and compensator output. The Bode plot of the compensated system is generated to confirm improvements in phase margin and stability.
+The next step involves designing a Type-II compensator to improve the system’s stability. The compensator is tailored to achieve a specific gain crossover frequency (100 Hz) and a phase margin of 120°. MATLAB is used to derive and simulate the compensator’s transfer function, which is then applied to the Buck converter to enhance its performance.
 
-- **5. Results and Conclusion**: Demonstrates the effectiveness of the Type-II compensator in stabilizing the Buck converter’s output voltage, ensuring accurate voltage regulation and improved stability.
+## Closed-Loop System Implementation
 
+The compensator is integrated into the Buck converter’s control loop to create a closed-loop system. This system is simulated in MATLAB/Simulink to evaluate its performance under various operating conditions. The closed-loop system allows for continuous adjustment of the PWM signal, ensuring that the output voltage closely follows the reference voltage.
+
+## Simulation and Analysis
+
+Simulations of the closed-loop system are conducted using MATLAB/Simulink. Key parameters such as input voltage, output voltage, inductor current, and compensator output are analyzed. A Bode plot of the compensated system is generated to confirm improvements in phase margin and overall stability, demonstrating the effectiveness of the compensator in achieving the desired performance.
+
+## Results and Conclusion
+
+The project concludes by demonstrating the effectiveness of the Type-II compensator in stabilizing the Buck converter’s output voltage. The compensator ensures accurate voltage regulation, improves system stability, and enhances the phase margin, making the system robust under varying load and input conditions.
